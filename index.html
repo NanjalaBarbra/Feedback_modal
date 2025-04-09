@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rating Modal</title>
+  <link rel="stylesheet" href="style.css" 
+
+</head>
+<body>
+
+     <!-- creating a button that opens up the the modal when its clicked -->
+  <button id="openModalBtn">Leave Feedback</button>
+  <div class="overlay" id="feedbackModal">
+    <div class="modal">
+      <button class="close-btn" id="closeModalBtn">&times;</button>
+      <h2>How likely are you to recommend FrontendPro to someone you know?</h2>
+
+    
+<div class="rating-options">
+
+    <!-- Text labels displayed on the lefthand and righthand side respectively -->
+    <span class="tooltip-left">Not likely at all</span>
+    <span class="tooltip-right">Extremely likely</span>
+
+    <button class="cancel-btn">Cancel</button>
+    <button class="submit-btn">Submit</button>
+  
+    <!-- Container that  holds my the rating buttons -->
+    <div class="rating-buttons">
+      <script>
+        // A for Loop to generate rating buttons
+        for (let i = 1; i <= 10; i++) {
+          
+          document.write(`<button class="rating-btn" data-value="${i}">${i}</button>`);
+        }
+      </script>
+  
+    </div>
+  </div>
+  
+       
+      </div>
+      
+      <div class="modal-actions">
+        
+        <button class="cancel-btn">Cancel</button>
+        <button class="submit-btn">Submit</button> 
+      </div>
+    </div>
+  </div>
+
+  <!-- links up the js file -->
+  <script src="script.js"></script> 
+</body>
+</html>

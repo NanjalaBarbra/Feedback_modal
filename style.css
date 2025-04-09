@@ -1,0 +1,177 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #d6ccf7;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .overlay {
+    display: none; /* The modal is Initially hidden */
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal {
+    background-color: #1c163b;
+    padding: 3rem;
+    border-radius: 16px;
+    width: auto; /* It allows the  modal to stretch to any size based on its content */
+    max-width: 550px;
+    position: relative;
+    flex-grow: 3;
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  }
+  
+  
+  .modal h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+  }
+  
+  /* for the Closedown button */
+  .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    color: #fff;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+ 
+  
+  
+    .rating-buttons {
+        display: flex;
+        flex-wrap: nowrap; /* prevent wrapping over to the next line */
+        justify-content: space-between; /*this creates space between the buttons */
+        gap: 0.8rem; 
+        overflow-x: auto; /* allows one to scroll over on smaller screens */
+      }
+
+       
+  .rating-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  
+  .rating-btn {
+    width: 78px;
+    height: 36px;
+    background-color: #2a234f;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .rating-btn:hover {
+    background-color: #5f45e2;
+  }
+  
+  .rating-btn.active {
+    border: 2px solid #a389fa;
+    background-color: #7b61ff;
+  }
+  
+  /* Tooltips */
+  .tooltip-left,
+  .tooltip-right {
+    font-size: 0.55rem;
+    color: #bbb;
+    width: 800px;
+    text-align: center;
+    position: absolute;
+    bottom: -20px;
+
+  }
+  .tooltip-left{
+    left: 0;
+  }
+  .tooltip-right{
+    right: 0;
+  }
+  
+  /* Modal actions */
+  .modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+
+  .cancel-btn,
+.submit-btn {
+    position: absolute;
+    bottom: -70px; /* Pushes the buttons down below the tooltips */
+    width: 80px;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    color: white;
+    background-color: #7b61ff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+
+.cancel-btn {
+    left: 0; /* Aligns it to the lefthand side */
+    background-color: transparent;
+    border: 1px solid #7b61ff;
+}
+
+.submit-btn {
+    right: 0; /* Aligns it to the righthand side */
+}
+
+
+.cancel-btn:hover,
+.submit-btn:hover {
+    background-color: #5f45e2;
+}
+
+#openModalBtn {
+    padding: 1rem 2rem;
+    background-color: #7b61ff;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
+  #openModalBtn:hover {
+    background-color: #5f45e2;
+  }
+  
+  #feedbackModal {
+    display: none; /* keeps the modal hidden*/
+  }
+  
+ 
+  
